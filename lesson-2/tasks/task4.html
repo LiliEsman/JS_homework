@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>
+        Завдання 4
+    </h1>
+    <p>
+        Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+    </p>
+    <h3>Рішення</h3>
+    <script>
+        //Вводимо данні о кількості сантиметрів
+        const centimeters = parseFloat(prompt('Введіть довжину у сантиметрах', '100cm'))
+        //Робимо розрахунки 
+        const meters = centimeters / 100
+        const kilometers = centimeters / 100000
+        //Виписуємо на сторінку
+        document.write(`${centimeters}cm = ${meters}m </br>`)
+        document.write(`${centimeters}cm = ${kilometers}km`)
+    </script>
+</body>
+</html>

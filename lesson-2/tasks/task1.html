@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        table { 
+            width: 50%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+        }
+        th, td { 
+            border: 1px solid black; 
+            padding: 8px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Завдання 1
+    </h1>
+    <p>
+        Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+    </p>
+    <h3>Рішення</h3>
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>Сума</th>
+            <th>Добуток</th>
+            <th>Частка</th>
+        </tr>
+        <tr>
+            <td id="var_a"></td>
+            <td id="var_b"></td>
+            <td id="sum"></td>
+            <td id="multiplication"></td>
+            <td id="division"></td>
+        </tr>
+    </table>
+
+    <script>
+        //Задаємо змінні a та b
+        const a = parseFloat(prompt('Введіть змінну a', '4'))
+        const b = parseFloat(prompt('Введіть змінну b', '7'))
+        //Знаходимо суму, добуток та частку
+        const sum = a + b
+        const multiplication = a * b
+        const division = (a / b).toFixed(2)
+        //Результати обчислень присвоюємо відповідним ячейкам
+        document.getElementById("var_a").textContent = a;
+        document.getElementById("var_b").textContent = b;
+        document.getElementById("sum").textContent = sum;
+        document.getElementById("multiplication").textContent = multiplication;
+        document.getElementById("division").textContent = division;
+    </script>
+</body>
+</html>

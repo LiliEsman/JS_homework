@@ -1,0 +1,87 @@
+/* Фон всієї сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background: #fff2e4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 28px;
+    color: #444;
+    background: #ffcccc;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Параграфи */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Оформлення списків */
+ol {
+    list-style: none; /* Видаляємо нумерацію */
+    padding: 0;
+}
+
+li {
+    background: #ffedd7;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Стилізація таблиці */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #ffe4e1;
+    color: #444;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Красиві посилання */
+a {
+    text-decoration: none;
+    color: white;
+    background: #ff6b6b;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #ff4040;
+}

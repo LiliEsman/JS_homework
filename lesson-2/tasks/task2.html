@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>
+        Завдання 2
+    </h1>
+    <p>
+        Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.
+    </p>
+    <h3>Рішення</h3>
+    <script>
+        //Задаємо поточний рік та отримуємо рік народження користувача
+        const currentYear = 2025
+        const yearOfBirth = prompt('Введдіть рік народження', '2000')
+        //Вираховуємо кілкість років, що минуло
+        const age = currentYear - yearOfBirth
+        //Виводимо результат на сторінку
+        document.write(`Вам ${age} років`)
+    </script>
+</body>
+</html>

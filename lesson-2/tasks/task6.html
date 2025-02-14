@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 6</title>
+    <style>
+        body { font-family: monospace; text-align: center; background: #f8f8f8; }
+        .receipt {
+            display: inline-block;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            width: 280px;
+            text-align: left;
+        }
+        .receipt h2 { text-align: center; margin-bottom: 10px; }
+        .line { border-top: 1px dashed black; margin: 5px 0; }
+        .total { font-weight: bold; text-align: right; }
+    </style>
+</head>
+<body>
+    <h1>
+        Завдання 6
+    </h1>
+    <p>
+        З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки
+    </p>
+    <h3>Рішення</h3>
+    <div class="receipt">
+        <h2>Шалена Бджілка</h2>
+        <p id="receiptContent"></p>
+        <div class="line"></div>
+        <p class="total">Загальна сума: <span id="total"></span> грн</p>
+        <p style="text-align: center; font-size: 12px;">Дякуємо за покупку!</p>
+    </div>
+
+    <script>
+        //Користувач задає вхідні данні о трьох позиціях: назва, вартість одиниці, кількість
+        let name1 = prompt('Введіть назву першого товару:', 'Milka')
+        let price1 = parseFloat(prompt('Введіть ціну першого товару (грн):', '87.5'))
+        let quantity1 = parseInt(prompt("Введіть кількість першого товару:", "3"))
+
+        let name2 = prompt("Введіть назву другого товару:", "Lays")
+        let price2 = parseFloat(prompt("Введіть ціну другого товару (грн):", "65"))
+        let quantity2 = parseInt(prompt("Введіть кількість другого товару:", "2"))
+
+        let name3 = prompt("Введіть назву третього товару:", "Apricots")
+        let price3 = parseFloat(prompt("Введіть ціну третього товару (грн):", "7.2"))
+        let quantity3 = parseInt(prompt("Введіть кількість третього товару:", "15"))
+        //Рахуємо окреми суми для кожного типу товару та загальну вартість
+        let sum1 = price1 * quantity1
+        let sum2 = price2 * quantity2
+        let sum3 = price3 * quantity3
+        let totalSum = sum1 + sum2 + sum3
+        //Виводимо дані до чеку
+        document.getElementById("receiptContent").innerHTML = `
+            <p><b>${name1}</b><br>${quantity1} x ${price1.toFixed(2)} грн → <b>${sum1.toFixed(2)} грн</b></p>
+            <div class="line"></div>
+            <p><b>${name2}</b><br>${quantity2} x ${price2.toFixed(2)} грн → <b>${sum2.toFixed(2)} грн</b></p>
+            <div class="line"></div>
+            <p><b>${name3}</b><br>${quantity3} x ${price3.toFixed(2)} грн → <b>${sum3.toFixed(2)} грн</b></p>
+        `
+
+        document.getElementById("total").innerText = totalSum.toFixed(2)
+    </script>
+
+</body>
+</html>

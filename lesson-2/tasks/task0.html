@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 0</title>
+    <link rel="stylesheet" href="/style.css">
+    <!--<style>
+        table { 
+            width: 50%; 
+            border-collapse: collapse; 
+            margin-top: 20px; 
+        }
+        th, td { 
+            border: 1px solid black; 
+            padding: 8px; 
+            text-align: center; 
+        }
+    </style> -->
+
+</head>
+<body>
+    <h1>
+        Завдання 0
+    </h1>
+    <p>
+        Обчислити значення виразів
+    </p>
+    <h3>Рішення</h3>
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>с</th>
+            <th>S1</th>
+            <th>S2</th>
+            <th>S3</th>
+            <th>S4</th>
+        </tr>
+        <tr>
+            <td id="var_a"></td>
+            <td id="var_b"></td>
+            <td id="var_c"></td>
+            <td id="result_s1"></td>
+            <td id="result_s2"></td>
+            <td id="result_s3"></td>
+            <td id="result_s4"></td>
+        </tr>
+    </table>
+
+    <script>
+        //Задаємо переменні a, b, c
+        const a = parseFloat(prompt('Задайте перемінну a', '5'))
+        const b = parseFloat(prompt('Задайте перемінну b', '6'))
+        const c = parseFloat(prompt('Задайте перемінну c', '7'))
+        //Виконуємо разрахунки за даними формулами та округлюємо для зручності\
+        const s1 = a + 12 + b
+        const s2 = Math.sqrt( (a + b) / 2*a).toFixed(2)
+        const s3 = Math.pow(((a+b)*c), 1/3).toFixed(2)
+        const s4 = Math.sin(a/(-b)).toFixed(2)
+        //Виводимо данні у таблицю
+        document.getElementById("var_a").textContent = a;
+        document.getElementById("var_b").textContent = b;
+        document.getElementById("var_c").textContent = c; 
+
+        document.getElementById("result_s1").textContent = s1;
+        document.getElementById("result_s2").textContent = s2;
+        document.getElementById("result_s3").textContent = s3;
+        document.getElementById("result_s4").textContent = s4;
+    </script>
+</body>
+</html>
