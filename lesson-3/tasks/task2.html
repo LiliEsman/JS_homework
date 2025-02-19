@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <h1>Завдання 2</h1>
+    <p>З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.</p>
+
+    <h3>Результат</h3>
+
+    <script>
+        const price = parseFloat(prompt('Введіть ціну товару', '1350.40грн'))
+        const budget = parseFloat(prompt('Ваш бюджет?', '1200грн'))
+
+        if (budget >= price) {
+            const change = budget - price
+
+            document.write(`Покупка пройшла успішно. Залишок: ${change} грн. </br>`)
+
+            if(change >= 4) {
+                document.write('Рекомендуємо придбати лоторею за 4грн. </br>')
+            }
+
+        } else {
+            document.write('Нажаль, не вистачає грошей для здійснення покупки')
+        }
+    </script>
+</body>
+</html>

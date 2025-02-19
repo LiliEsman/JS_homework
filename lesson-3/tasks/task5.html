@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <h1>Завдання 5</h1>
+    <p>З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного засобу, яким він може керувати.</p>
+
+    <h3>Результат</h3>
+
+    <script>
+        const categoryOfDrivingLicense = prompt('Введіть назву категорії водійского посвідчення(A, B, C)', 'B')
+
+        switch (categoryOfDrivingLicense) {
+            case "A": 
+                document.write("Ви можете керувати мотоциклом")
+                break
+            case "B": 
+                document.write("Ви можете керувати легковим автомобілем")
+                break
+            case "C": 
+                document.write("Ви можете керувати ванатжівкою")
+                break
+        }
+    </script>
+</body>
+</html>

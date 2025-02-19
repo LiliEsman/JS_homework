@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <h1>Завдання 3</h1>
+    <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
+
+    <h3>Результат</h3>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 5) + 1
+
+        const attempt1 = parseInt(prompt('Спробуйте вгадати число від 1 до 5. У вас 2 спроби.', '2'))
+        if (attempt1 == randomNumber) {
+            document.write(`Вітаю! Ви успішно вгадали число ${randomNumber}`)
+        } else {
+            const attempt2 = parseInt(prompt('Спробуйте ще раз!', '4'))
+            
+            if (attempt2 == randomNumber) {
+                document.write(`Вітаю! Ви успішно вгадали число ${randomNumber}`)
+            } else {
+                document.write(`Нажаль, ви не вгадали число ${randomNumber}`)
+            }
+        }
+    </script>
+</body>
+</html>
