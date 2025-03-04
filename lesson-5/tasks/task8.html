@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <h1>Завдання 8</h1>
+    <p>Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число користувача </p>
+    <h3>Результат</h3>
+
+    <script>
+        if(confirm('Почати тестування?')) {
+            let userNumber
+            let attempts = 0
+
+            do {
+                userNumber = parseInt(prompt('Введіть своє число(від 1 до 10)', '2'));
+                
+                if (isNaN(userNumber) || userNumber < 1 || userNumber > 10) {
+                    alert("Перечитайте умову уважніше");
+                }
+            } while (isNaN(userNumber) || userNumber < 1 || userNumber > 10);
+
+            while(attempts<3) {
+                const guessedNumber = Math.floor(Math.random()*10) + 1
+
+                document.write(`Комп'ютер перевіряє число ${guessedNumber} </br>`)
+
+                if(guessedNumber === userNumber) {
+                    document.write(`Компьютер вгадав! Ваше число це ${userNumber}`)
+                    break
+                }
+
+                attempts++
+            }
+
+            if(attempts === 3) {
+                document.write(`Комп'ютер не вгадав ваше число`)
+            }
+        }
+    </script>
+</body>
+</html>

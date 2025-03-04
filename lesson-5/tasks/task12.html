@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <h1>Завдання 12</h1>
+    <p>Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за номером).</p>
+    <h3>Результат</h3>
+
+    <div id="imageContainer"></div>
+    <p id="result"></p>
+    
+    <script>
+        let img1, img2, img3
+        let winAmount = 0
+    
+        
+        for (let i = 0; i < 4; i++) {
+            let randomNumber = Math.floor(Math.random() * 4)
+    
+            if (randomNumber === 0) {
+                if (i === 0) img1 = '<img src="../piguin.jpg" alt="Голуб" width="200" height="200">'
+                if (i === 1) img2 = '<img src="../piguin.jpg" alt="Голуб" width="200" height="200">'
+                if (i === 2) img3 = '<img src="../piguin.jpg" alt="Голуб" width="200" height="200">'
+                if (i === 3) img4 = '<img src="../piguin.jpg" alt="Голуб" width="200" height="200">'
+            }
+            if (randomNumber === 1) {
+                if (i === 0) img1 = '<img src="../rat.jpg" alt="Пацюк" width="200" height="200">'
+                if (i === 1) img2 = '<img src="../rat.jpg" alt="Пацюк" width="200" height="200">'
+                if (i === 2) img3 = '<img src="../rat.jpg" alt="Пацюк" width="200" height="200">'
+                if (i === 2) img4 = '<img src="../rat.jpg" alt="Пацюк" width="200" height="200">'
+            }
+            if (randomNumber === 2) {
+                if (i === 0) img1 = '<img src="../roach.jpg" alt="Тарган" width="200" height="200">'
+                if (i === 1) img2 = '<img src="../roach.jpg" alt="Тарган" width="200" height="200">'
+                if (i === 2) img3 = '<img src="../roach.jpg" alt="Тарган" width="200" height="200">'
+                if (i === 3) img4 = '<img src="../roach.jpg" alt="Тарган" width="200" height="200">'
+            }
+            if (randomNumber === 3) {
+                if (i === 0) img1 = '<img src="../frog.jpg" alt="Жаба" width="200" height="200">'
+                if (i === 1) img2 = '<img src="../frog.jpg" alt="Жаба" width="200" height="200">'
+                if (i === 2) img3 = '<img src="../frog.jpg" alt="Жаба" width="200" height="200">'
+                if (i === 3) img4 = '<img src="../frog.jpg" alt="Жаба" width="200" height="200">'
+            }
+        }
+    
+        document.getElementById("imageContainer").innerHTML = img1 + img2 + img3 + img4
+    
+        if (img1 === img2 && img2 === img3 && img3 === img4) {
+            if (img1.includes("piguin")) {
+                winAmount = 100;
+            } else if (img1.includes("rat")) {
+                winAmount = 200;
+            } else if (img1.includes("roach")) {
+                winAmount = 500;
+            } else if (img1.includes("frog")) {
+                winAmount = 1000;
+            }
+            document.getElementById("result").innerHTML = `<h3>Юху! Ви виграли аж ${winAmount} грн! Фортуна повернулася до вас хорошим боком ♥</h3>`
+        } else {
+            document.getElementById("result").innerHTML = "<h3>На жаль, виграшу немає... Не засмучуйся</h3>"
+        }
+    </script>
+
+</body>
+</html>

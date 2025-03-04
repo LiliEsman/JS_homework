@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <h1>Завдання 4</h1>
+    <p>Вивести таблицю з 3 рядків і 7 стовпців.</p>
+    <h3>Результат</h3>
+    <script>
+        if(confirm('Почати тестування?')) {
+            document.write('<table border="1">')
+
+            for(i=0; i<3; i++) {
+                document.write('<tr>')
+                let num=1
+                for(j=0; j<7; j++) {
+                    document.write(`<td>${num}</td>`)
+                    num++
+                }
+                document.write('</tr>')
+            }
+
+            document.write('</table>')
+        }
+    </script>
+</body>
+</html>
